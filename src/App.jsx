@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Experience from "./components/Experience";
 import Project from "./components/Projects";
+import Contact from "./components/Contact";
 
 function App() {
     useEffect(() => {
@@ -24,11 +25,11 @@ function App() {
             <Section id="experience">
                 <Experience />
             </Section>
-            <Section id="projects" className="bg-bg/50">
+            <Section id="projects">
                 <Project />
             </Section>
             <Section id="contact">
-                <h2 className="text-2xl text-accent">Contact placeholder</h2>
+                <Contact />
             </Section>
         </div>
     );
