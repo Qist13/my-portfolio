@@ -6,3 +6,7 @@
     --color-muted: #6b7086;
     --color-accent: #89a6fb;
 }
+
+html {
+    scroll-behavior: smooth;
+}

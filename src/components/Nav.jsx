@@ -1,29 +1,25 @@
 function Nav() {
     const links = [
-        { href: "#hero", label: "~/" },
-        { href: "#about", label: "about" },
-        { href: "#experience", label: "experience" },
-        { href: "#projects", label: "projects" },
-        { href: "#contact", label: "contact" },
+        { href: "#about", label: "About" },
+        { href: "#experience", label: "Experience" },
+        { href: "#projects", label: "Projects" },
+        { href: "#contact", label: "Contact" },
+        { href: "/resume.pdf", label: "Resume" },
     ];
-
-    const scrollToTop = (e) => {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    };
 
     return (
         <nav className="sticky top-0 z-50 w-full bg-bg/80 backdrop-blur border-b border-muted/20">
-            <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between font-mono text-sm">
-                <a
-                    href="#hero"
-                    onClick={scrollToTop}
-                    className="text-accent font-bold"
+            <div className="w-full px-6 py-4 flex items-center justify-between font-mono text-sm">
+                <button
+                    onClick={() =>
+                        window.scrollTo({ top: 0, behavior: "smooth" })
+                    }
+                    className="text-accent font-bold cursor-pointer"
                 >
-                    Q
-                </a>
+                    QX
+                </button>
                 <div className="flex gap-6">
-                    {links.slice(1).map((link) => (
+                    {links.map((link) => (
                         <a
                             key={link.href}
                             href={link.href}

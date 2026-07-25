@@ -16,7 +16,7 @@ function Hero() {
                 technologies.
             </p>
             <a
-                href="#experience"
+                href="#about"
                 className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted hover:text-accent transition-colors animate-bounce"
                 aria-label="Scroll to experience section"
             >
