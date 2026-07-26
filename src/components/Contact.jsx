@@ -1,4 +1,42 @@
+import { useState } from "react";
+
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mwvgwzno";
+
 function Contact() {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: "",
+    });
+    const [status, setStatus] = useState("idle");
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setStatus("sending");
+
+        try {
+            const res = await fetch(FORMSPREE_ENDPOINT, {
+                method: "POST",
+                headers: { Accept: "application/json" },
+                body: new FormData(e.target),
+            });
+
+            if (res.ok) {
+                setStatus("success");
+                setFormData({ name: "", email: "", message: "" });
+            } else {
+                setStatus("error");
+            }
+        } catch (err) {
+            console.error(err);
+            setStatus("error");
+        }
+    };
+
     return (
         <section className="text-accent text-3xl">
             <div className="mx-auto">
@@ -8,7 +46,10 @@ function Contact() {
                     and would love to connect. Feel free to reach out if you
                     have a question, opportunity, or just want to chat.
                 </p>
-                <form className="flex flex-col gap-4 mt-4 text-sm text-text">
+                <form
+                    onSubmit={handleSubmit}
+                    className="flex flex-col gap-4 mt-4 text-sm text-text"
+                >
                     <div className="flex gap-4 w-full">
                         <div className="flex flex-col gap-2 w-1/2">
                             <label htmlFor="name" className="text-text">
@@ -16,7 +57,11 @@ function Contact() {
                             </label>
                             <input
                                 id="name"
+                                name="name"
                                 type="text"
+                                required
+                                value={formData.name}
+                                onChange={handleChange}
                                 placeholder="Tom Pherry"
                                 className="w-full p-3 rounded-xl bg-background border
                             border-muted/20 bg-muted/15 focus:border-accent focus:outline-none"
@@ -29,7 +74,11 @@ function Contact() {
                             </label>
                             <input
                                 id="email"
+                                name="email"
                                 type="email"
+                                required
+                                value={formData.email}
+                                onChange={handleChange}
                                 placeholder="your@email.com"
                                 className="w-full p-3 rounded-xl bg-background border border-muted/30 bg-muted/15 focus:border-accent focus:outline-none"
                             />
@@ -42,14 +91,32 @@ function Contact() {
                         </label>
                         <textarea
                             id="message"
+                            name="message"
+                            required
+                            value={formData.message}
+                            onChange={handleChange}
                             placeholder="Hi, I would love to have a chat!"
                             className="w-full p-3 rounded-xl bg-background border border-muted/30 bg-muted/15 h-32 focus:border-accent focus:outline-none"
                         />
                     </div>
 
-                    <button className="self-center w-fit px-6 py-3 rounded-2xl font-bold text-background bg-accent/80 hover:bg-accent/80 cursor-pointer transition-colors">
-                        Send Message
+                    <button
+                        type="sumbit"
+                        className="self-center w-fit px-6 py-3 rounded-2xl font-bold text-background bg-accent/80 hover:bg-accent/80 cursor-pointer transition-colors"
+                    >
+                        {status === "sending" ? "Sending..." : "Send Message"}
                     </button>
+                    {status === "success" && (
+                        <p className="text-center text-green-400 text-sm">
+                            Message sent! I'll get back to you soon.
+                        </p>
+                    )}
+                    {status === "error" && (
+                        <p className="text-center text-red-400 text-sm">
+                            Something went wrong. Please try again or email me
+                            directly.
+                        </p>
+                    )}
                 </form>
             </div>
         </section>
