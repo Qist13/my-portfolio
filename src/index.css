@@ -10,3 +10,33 @@
 html {
     scroll-behavior: smooth;
 }
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+*:hover {
+    scrollbar-color: var(--color-muted) transparent;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 999px;
+}
+
+*:hover::-webkit-scrollbar-thumb {
+    background: var(--color-muted);
+}
+
+*:hover::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent);
+}

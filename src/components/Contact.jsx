@@ -96,7 +96,7 @@ function Contact() {
                             value={formData.message}
                             onChange={handleChange}
                             placeholder="Hi, I would love to have a chat!"
-                            className="w-full p-3 rounded-xl bg-background border border-muted/30 bg-muted/15 h-32 focus:border-accent focus:outline-none"
+                            className="w-full p-3 rounded-xl bg-background border border-muted/30 bg-muted/15 h-32 min-h-32 max-h-64 resize-y focus:border-accent focus:outline-none"
                         />
                     </div>
 
