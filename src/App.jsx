@@ -6,6 +6,7 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Project from "./components/Projects";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
     useEffect(() => {
@@ -31,6 +32,7 @@ function App() {
             <Section id="contact">
                 <Contact />
             </Section>
+            <Footer />
         </div>
     );
 }
