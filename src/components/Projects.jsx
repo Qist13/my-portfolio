@@ -25,7 +25,7 @@ const projects = [
         title: "WATtoEat",
         description:
             "A food discovery platform that helps University of Waterloo students find and explore nearby restaurants based on their preferences, location, and dining needs.",
-        tags: "Kotlin",
+        tags: "Kotlin,Compose Multiplatform",
         image: WATtoEat,
         link: "https://github.com/Qist13/WAT-to-Eat",
     },
