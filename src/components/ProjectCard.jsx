@@ -4,26 +4,30 @@ function ProjectCard({ project }) {
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex flex-col bg-muted/15 rounded-lg overflow-hidden border border-transparent hover:border-accent/50 transition-colors"
+            className="group relative flex flex-col aspect-video rounded-lg overflow-hidden border border-transparent hover:border-accent/50 transition-colors bg-muted/20"
         >
-            <div className="w-full overflow-hidden bg-muted/20">
-                <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+            <img
+                src={project.image}
+                alt={project.title}
+                className="absolute inset-0 w-full h-full object-contain"
+            />
+
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                <h3 className="text-lg font-bold text-white">
+                    {project.title}
+                </h3>
             </div>
 
-            <div className="flex flex-col gap-2 p-5">
-                <h3 className="text-lg font-bold text-text group-hover:text-accent transition-colors">
+            <div className="absolute inset-0 flex flex-col justify-end p-5 bg-black/85 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <h3 className="text-lg font-bold text-white mb-2">
                     {project.title}
                 </h3>
 
-                <p className="text-sm text-text/60 leading-relaxed">
+                <p className="text-sm text-white/70 leading-relaxed">
                     {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mt-2">
+                <div className="flex flex-wrap gap-2 mt-3">
                     {project.tags.split(",").map((tag) => (
                         <span
                             key={tag}
