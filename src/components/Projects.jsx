@@ -2,6 +2,7 @@ import ProjectCard from "./ProjectCard";
 import WATtoEat from "../assets/images/wat-to-eat.png";
 import Chess from "../assets/images/chess.png";
 import TychesCharm from "../assets/images/tyches-charm.png";
+import RainbowRenderer from "../assets/images/rainbow-renderer.png";
 
 const projects = [
     {
@@ -11,6 +12,14 @@ const projects = [
         tags: "Python,Django,React,JavaScript",
         image: TychesCharm,
         link: "https://github.com/Qist13/tyches-charm",
+    },
+    {
+        title: "Rainbow Renderer",
+        description:
+            "A physically-based rainbow renderer built on a custom ray tracer — simulates dispersion, internal reflection, and Fresnel attenuation through water droplets to render a primary bow, secondary bow, and Alexander's dark band.",
+        tags: "C++",
+        image: RainbowRenderer,
+        link: "",
     },
     {
         title: "WATtoEat",
