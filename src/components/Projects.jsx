@@ -1,17 +1,17 @@
 import ProjectCard from "./ProjectCard";
 import WATtoEat from "../assets/images/wat-to-eat.png";
 import Chess from "../assets/images/chess.png";
-import TychesCharm from "../assets/images/tyches-charm.png";
 import RainbowRenderer from "../assets/images/rainbow-renderer.png";
+import Verbolt from "../assets/images/verbolt.png";
 
 const projects = [
     {
-        title: "Tyche's Charm",
+        title: "Verbolt",
         description:
-            "A casino-style gaming platform featuring interactive games, simulated betting mechanics, and an engaging gameplay experience.",
-        tags: "Python,Django,React,JavaScript",
-        image: TychesCharm,
-        link: "https://github.com/Qist13/tyches-charm",
+            "A language translation app that supports text, image, video, and voice-based translations",
+        tags: "Python,FastAPI,TypeScript,React",
+        image: Verbolt,
+        link: "https://github.com/Qist13/verbolt",
     },
     {
         title: "Rainbow Renderer",
