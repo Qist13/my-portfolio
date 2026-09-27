@@ -19,7 +19,7 @@ const projects = [
             "A physically-based rainbow renderer built on a custom ray tracer — simulates dispersion, internal reflection, and Fresnel attenuation through water droplets to render a primary bow, secondary bow, and Alexander's dark band.",
         tags: "C++",
         image: RainbowRenderer,
-        link: "",
+        link: "https://github.com/Qist13/rainbow-renderer",
     },
     {
         title: "WATtoEat",
