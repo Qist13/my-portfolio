@@ -9,6 +9,7 @@ function ProjectCard({ project }) {
             <img
                 src={project.image}
                 alt={project.title}
+                loading="lazy"
                 className="absolute inset-0 w-full h-full object-contain"
             />
 
@@ -18,7 +19,7 @@ function ProjectCard({ project }) {
                 </h3>
             </div>
 
-            <div className="absolute inset-0 flex flex-col justify-end p-5 bg-black/85 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <div className="absolute inset-0 flex flex-col justify-end p-5 bg-black/85 translate-y-full group-hover:translate-y-0 group-focus-visible:translate-y-0 transition-transform duration-300">
                 <h3 className="text-lg font-bold text-white mb-2">
                     {project.title}
                 </h3>

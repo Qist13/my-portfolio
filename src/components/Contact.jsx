@@ -50,8 +50,8 @@ function Contact() {
                     onSubmit={handleSubmit}
                     className="flex flex-col gap-4 mt-4 text-sm text-text"
                 >
-                    <div className="flex gap-4 w-full">
-                        <div className="flex flex-col gap-2 w-1/2">
+                    <div className="flex flex-col sm:flex-row gap-4 w-full">
+                        <div className="flex flex-col gap-2 w-full sm:w-1/2">
                             <label htmlFor="name" className="text-text">
                                 Name
                             </label>
@@ -68,7 +68,7 @@ function Contact() {
                             />
                         </div>
 
-                        <div className="flex flex-col gap-2 w-1/2">
+                        <div className="flex flex-col gap-2 w-full sm:w-1/2">
                             <label htmlFor="email" className="text-text">
                                 Email
                             </label>
