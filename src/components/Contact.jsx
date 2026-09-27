@@ -63,7 +63,7 @@ function Contact() {
                                 value={formData.name}
                                 onChange={handleChange}
                                 placeholder="Tom Pherry"
-                                className="w-full p-3 rounded-xl bg-background border
+                                className="w-full p-3 rounded-xl border
                             border-muted/20 bg-muted/15 focus:border-accent focus:outline-none"
                             />
                         </div>
@@ -80,7 +80,7 @@ function Contact() {
                                 value={formData.email}
                                 onChange={handleChange}
                                 placeholder="your@email.com"
-                                className="w-full p-3 rounded-xl bg-background border border-muted/30 bg-muted/15 focus:border-accent focus:outline-none"
+                                className="w-full p-3 rounded-xl border border-muted/30 bg-muted/15 focus:border-accent focus:outline-none"
                             />
                         </div>
                     </div>
@@ -96,13 +96,14 @@ function Contact() {
                             value={formData.message}
                             onChange={handleChange}
                             placeholder="Hi, I would love to have a chat!"
-                            className="w-full p-3 rounded-xl bg-background border border-muted/30 bg-muted/15 h-32 min-h-32 max-h-64 resize-y focus:border-accent focus:outline-none"
+                            className="w-full p-3 rounded-xl border border-muted/30 bg-muted/15 h-32 min-h-32 max-h-64 resize-y focus:border-accent focus:outline-none"
                         />
                     </div>
 
                     <button
-                        type="sumbit"
-                        className="self-center w-fit px-6 py-3 rounded-2xl font-bold text-background bg-accent/80 hover:bg-accent/80 cursor-pointer transition-colors"
+                        type="submit"
+                        disabled={status === "sending"}
+                        className="self-center w-fit px-6 py-3 rounded-2xl font-bold text-bg bg-accent/80 hover:bg-accent cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed transition-colors"
                     >
                         {status === "sending" ? "Sending..." : "Send Message"}
                     </button>

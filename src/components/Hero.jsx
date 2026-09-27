@@ -1,6 +1,6 @@
 function Hero() {
     return (
-        <div className="min-h-[80vh] flex flex-col justify-center gap-4">
+        <div className="relative min-h-[80vh] flex flex-col justify-center gap-4">
             <p className="text-accent text-sm">Hi, my name is</p>
 
             <h1 className="text-5xl md:text-6xl font-bold text-text">
@@ -18,7 +18,7 @@ function Hero() {
             <a
                 href="#about"
                 className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted hover:text-accent transition-colors animate-bounce"
-                aria-label="Scroll to experience section"
+                aria-label="Scroll to about section"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"

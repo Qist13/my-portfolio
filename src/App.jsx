@@ -10,8 +10,14 @@ import Footer from "./components/Footer";
 
 function App() {
     useEffect(() => {
-        window.history.replaceState(null, "", window.location.pathname);
-        window.scrollTo(0, 0);
+        const target = document.getElementById(
+            window.location.hash.slice(1),
+        );
+        if (target) {
+            target.scrollIntoView();
+        } else {
+            window.scrollTo(0, 0);
+        }
     }, []);
 
     return (

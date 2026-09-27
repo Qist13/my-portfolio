@@ -24,7 +24,7 @@ const socials = [
     },
     {
         name: "Email",
-        href: "mailto:qikunx13@email.com",
+        href: "mailto:qikunx13@gmail.com",
         icon: MdEmail,
     },
 ];
