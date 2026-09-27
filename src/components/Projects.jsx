@@ -3,8 +3,17 @@ import WATtoEat from "../assets/images/wat-to-eat.png";
 import Chess from "../assets/images/chess.png";
 import RainbowRenderer from "../assets/images/rainbow-renderer.png";
 import Verbolt from "../assets/images/verbolt.png";
+import HSIntellect from "../assets/images/hsintellect.png";
 
 const projects = [
+    {
+        title: "HSIntellect",
+        description:
+            "A Hearthstone deck tracker that reads the game's log files to rebuild game state live, showing an always-on-top overlay with the cards left in your deck, draw chances, your opponent's plays, and win rates per deck.",
+        tags: "JavaScript,Electron,Node.js",
+        image: HSIntellect,
+        link: "https://github.com/Qist13/HSIntellect",
+    },
     {
         title: "Verbolt",
         description:
