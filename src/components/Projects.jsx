@@ -2,7 +2,7 @@ import ProjectCard from "./ProjectCard";
 import WATtoEat from "../assets/images/wat-to-eat.webp";
 import Chess from "../assets/images/chess.png";
 import RainbowRenderer from "../assets/images/rainbow-renderer.png";
-import Verbolt from "../assets/images/verbolt.png";
+import Verbolt from "../assets/images/verbolt.webp";
 import HSIntellect from "../assets/images/hsintellect.webp";
 import Momentr from "../assets/images/momentr.webp";
 
