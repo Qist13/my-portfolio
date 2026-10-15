@@ -4,15 +4,24 @@ import Chess from "../assets/images/chess.png";
 import RainbowRenderer from "../assets/images/rainbow-renderer.png";
 import Verbolt from "../assets/images/verbolt.webp";
 import HSIntellect from "../assets/images/hsintellect.webp";
-import Momentr from "../assets/images/momentr.webp";
+import MomentrClipper from "../assets/images/momentr.webp";
+import Momentr from "../assets/images/momentr-icon.webp";
 
 const projects = [
     {
         title: "Momentr",
         description:
-            "An instant-replay screen clipper for Linux that keeps a rolling buffer of your screen and desktop audio in RAM, saving the last 30 seconds as an MP4 on a hotkey — with hardware-accelerated encoding, a tray menu, live-reloading settings, and automatic clip cleanup.",
-        tags: "Python",
+            "A website for sharing short video clips of your favorite moments.",
+        tags: "TypeScript,React,Python,Django,PostgreSQL",
         image: Momentr,
+        link: "https://github.com/Qist13/momentr-web",
+    },
+    {
+        title: "Momentr (Clipper)",
+        description:
+            "A desktop app that quietly records your screen in the background, so when something great happens you can press a key and save the moment.",
+        tags: "Python",
+        image: MomentrClipper,
         link: "https://github.com/Qist13/momentr",
     },
     {

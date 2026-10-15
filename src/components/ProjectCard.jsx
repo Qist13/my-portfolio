@@ -13,14 +13,14 @@ function ProjectCard({ project }) {
                 className="absolute inset-0 w-full h-full object-contain"
             />
 
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent transition-opacity duration-300 group-hover:opacity-0 group-focus-visible:opacity-0">
                 <h3 className="text-lg font-bold text-white">
                     {project.title}
                 </h3>
             </div>
 
-            <div className="absolute inset-0 flex flex-col justify-end p-5 bg-black/85 translate-y-full group-hover:translate-y-0 group-focus-visible:translate-y-0 transition-transform duration-300">
-                <h3 className="text-lg font-bold text-white mb-2">
+            <div className="absolute inset-0 flex flex-col overflow-y-auto p-5 bg-black/85 translate-y-full group-hover:translate-y-0 group-focus-visible:translate-y-0 transition-transform duration-300">
+                <h3 className="mt-auto text-lg font-bold text-white mb-2">
                     {project.title}
                 </h3>
 
