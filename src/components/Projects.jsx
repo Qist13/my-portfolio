@@ -23,7 +23,7 @@ const projects = [
             "A desktop app that quietly records your screen in the background, so when something great happens you can press a key and save the moment.",
         tags: "Python",
         image: MomentrClipper,
-        link: "https://github.com/Qist13/momentr",
+        link: "https://github.com/Qist13/momentr-clipper",
     },
     {
         title: "StrawhatDB",
