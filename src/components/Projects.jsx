@@ -6,6 +6,7 @@ import Verbolt from "../assets/images/verbolt.webp";
 import HSIntellect from "../assets/images/hsintellect.webp";
 import MomentrClipper from "../assets/images/momentr.webp";
 import Momentr from "../assets/images/momentr-icon.webp";
+import StrawhatDB from "../assets/images/strawhatdb.svg";
 
 const projects = [
     {
@@ -23,6 +24,14 @@ const projects = [
         tags: "Python",
         image: MomentrClipper,
         link: "https://github.com/Qist13/momentr",
+    },
+    {
+        title: "StrawhatDB",
+        description:
+            "A relational database engine built from scratch, with a page-based storage manager, an LRU buffer pool, and B+ tree indexing for fast point and range queries.",
+        tags: "C++",
+        image: StrawhatDB,
+        link: "https://github.com/Qist13/strawhatdb",
     },
     {
         title: "HSIntellect",

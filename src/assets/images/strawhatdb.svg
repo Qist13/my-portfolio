@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#12141c"/>
+  <!-- brim -->
+  <ellipse cx="320" cy="200" rx="140" ry="28" fill="#e8bf5e"/>
+  <!-- crown: database cylinder -->
+  <path d="M256 90 V126 A64 16 0 0 0 384 126 V90 Z" fill="#f3d27a"/>
+  <path d="M256 132 A64 16 0 0 0 384 132 V196 A64 16 0 0 1 256 196 Z" fill="#f3d27a"/>
+  <!-- red band -->
+  <path d="M256 166 A64 16 0 0 0 384 166 V196 A64 16 0 0 1 256 196 Z" fill="#c8453b"/>
+  <!-- top -->
+  <ellipse cx="320" cy="90" rx="64" ry="16" fill="#f8e3a3"/>
+</svg>
