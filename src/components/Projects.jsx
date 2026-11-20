@@ -21,7 +21,7 @@ const projects = [
         title: "Momentr (Clipper)",
         description:
             "A desktop app that quietly records your screen in the background, so when something great happens you can press a key and save the moment.",
-        tags: "Python",
+        tags: "TypeScript,Electron,Node.js",
         image: MomentrClipper,
         link: "https://github.com/Qist13/momentr-clipper",
     },
